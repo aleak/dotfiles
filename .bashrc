@@ -108,8 +108,6 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export AWS_ACCESS_KEY=AKIAIDFRVCU3OKJRZF7Q
-export AWS_SECRET_KEY=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
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export EC2_URL=https://ec2.us-east-1.amazonaws.com
 
