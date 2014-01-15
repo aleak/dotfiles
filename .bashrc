@@ -114,6 +114,7 @@ export EC2_URL=https://ec2.us-east-1.amazonaws.com
 export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_HEAP_FREE_MIN=100000
 export RUBY_HEAP_MIN_SLOTS=600000
+export RUBY_GC_HEAP_INIT_SLOTS=600000
 
 PATH=$PATH:$AWS_IAM_HOME/bin
 
@@ -185,8 +186,10 @@ bash_prompt() {
 bash_prompt
 # unset bash_prompt
 
+complete -C $HOME/development/statpro/percolator/barista/bin/barista_completer barista
+
 alias robusta='cd ~/development/statpro/robusta ; rvm gemset use rails'
-alias percolator='cd ~/development/statpro/percolator ; rvm gemset use percolator ; complete -C $PWD/barista/bin/barista_completer barista'
+alias percolator='cd ~/development/statpro/percolator ; rvm gemset use percolator'
 alias chat_pidqin='NSS_SSL_CBC_RANDOM_IV=0 /usr/bin/pidgin&'
 
 # add vagrant to path
